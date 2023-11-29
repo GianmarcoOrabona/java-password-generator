@@ -36,11 +36,20 @@ public class PasswordGenerator {
         // data completa
         String userDateOfBirth = userDayOfBirth + "/" + userMonthOfBirth + "/" + userYearOfBirth;
 
+        // sommo i componenti della data di nascita dell'utente
+        int userDateOfBirthSum = userDayOfBirth + userMonthOfBirth + userYearOfBirth;
+
+        // creo la sua password
+        String password = userName + "-" + userLastName + "-" + userColor + "-" + userDateOfBirthSum;
+
         // stampo in console le info dell'utente
         System.out.println("Nome: " + userName);
         System.out.println("Cognome: " + userLastName);
         System.out.println("Colore preferito: " + userColor);
         System.out.println("Data di nascita: " + userDateOfBirth);
+
+        // stampo la password dell'utente in console
+        System.out.println("Ecco la tua insicurissima password: " + password );
 
         // chiudo lo scanner
         scan.close();
